@@ -1,6 +1,6 @@
 import React from 'react';
-import Header from '../components/header/Header';
-import Footer from '../components/footer/Footer';
+import Header from '../components/common/Header';
+import Footer from '../components/common/Footer';
 import Main from '../components/main/Main';
 import Banner from '../components/main/banner/Banner';
 

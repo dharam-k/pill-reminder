@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Button, Heading, Text } from '@chakra-ui/react';
-import backgroundImage from '../../../assets/images/banner2.png';
+import backgroundImage from '../../../assets/images/banner.jpg';
 import RegistrationModal from '../modal/RegistrationModal';
 
 const Banner = () => {
@@ -9,7 +9,7 @@ const Banner = () => {
         bgImage={`url(${backgroundImage})`}
         bgSize="cover"
         bgPosition="center"
-        minHeight="750px"
+        minHeight="600px"
         display="flex"
         alignItems="center"
         justifyContent="flex-start"

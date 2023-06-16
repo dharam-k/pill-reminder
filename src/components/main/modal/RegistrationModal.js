@@ -13,14 +13,14 @@ import {
   Text,
   VStack,
   HStack,
-  Steps,
-  Step,
 } from '@chakra-ui/react';
+import Step1 from '../forms/Step1';
+import Step2 from '../forms/Step2';
 
 const RegistrationModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [activeStep, setActiveStep] = useState(0);
-  const steps = ['Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5'];
+  const steps = ['User Login Details', 'Medication Alert Reminder Information'];
 
   const handleNext = () => {
     setActiveStep((prevStep) => prevStep + 1);
@@ -40,11 +40,14 @@ const RegistrationModal = () => {
     // You can render different forms or components based on the active step
     // Example: if (step === 0) { return <Step1Form />; }
 
-    return (
-      <Box p={4}>
-        <Text>Step {step + 1} Content</Text>
-      </Box>
-    );
+    switch (step+1) {
+      case 1:
+        return <Step1 />;
+      case 2:
+        return <Step2 />;
+      default:
+        return null;
+    }
   };
 
   return (
